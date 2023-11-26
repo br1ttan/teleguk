@@ -1,0 +1,17 @@
+<app-header />
+
+<mat-drawer-container class="drawer-container">
+    <mat-drawer mode="side" [opened]="true" #drawer>
+        <app-sidebar />
+    </mat-drawer>
+    
+    <mat-drawer-content class="drawer-content">
+            <div class="wrapper">
+                <main class="main">
+                    <router-outlet></router-outlet>
+                </main>
+                
+            </div>
+        </mat-drawer-content>
+    </mat-drawer-container>
+<app-footer class="footer"></app-footer>
