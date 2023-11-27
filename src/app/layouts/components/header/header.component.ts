@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { AppRouteEnum } from '@core';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from './components';
 
 @Component({
   selector: 'app-header',
@@ -8,5 +9,11 @@ import { AppRouteEnum } from '@core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
-  public readonly appRouteEnum = AppRouteEnum;
+  constructor(
+    public readonly dialog: MatDialog
+  ) {}
+
+  public onButtonClick(): void {
+    this.dialog.open(ModalComponent);
+  }
 }

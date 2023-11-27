@@ -1,0 +1,40 @@
+<div class="wrapper">
+    <h2>Registration</h2>
+    <form [formGroup]="formGroup">
+      <div class="input-box">
+        <input type="text" placeholder="Enter your name" required formControlName="name">
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Enter your email" required formControlName="email">
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Create password" required formControlName="password">
+      </div>
+      
+      <div class="client-box">
+        <div
+          class="customer"
+          [class.selected-role]="role === roles.Customer"
+          (click)="onRoleChange(roles.Customer)" >
+          <div class="customer-btn btn">Я купляю рекламу</div>
+        </div>
+        <div 
+          class="seller"
+          [class.selected-role]="role === roles.Seller"
+          (click)="onRoleChange(roles.Seller)">
+          <div class="seller-btn btn">Я продаю рекламу</div>
+        </div>
+      </div>
+
+      <div class="policy">
+        <input type="checkbox" formControlName="checkbox">
+        <span>I accept all terms & condition</span>
+      </div>
+      <div class="input-box button input-btn">
+        <input [disabled]="isFormInvalid || isFormDisabled" type="Submit" value="Register Now" (click)="onFormSubmit()">
+      </div>
+      <div class="text">
+        <h3>Already have an account? <a (click)="onButtonClick()">Login now</a></h3>
+      </div>
+    </form>
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+    <ng-container *ngIf="!isLoginMode; else loginModeTemplate">
+        <app-registration (clickEventEmitter)="onToggleMode()" />
+    </ng-container>
+
+    <ng-template #loginModeTemplate>
+        <app-login (clickEventEmitter)="onToggleMode()" />
+    </ng-template>
+</div>

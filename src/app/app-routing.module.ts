@@ -23,11 +23,6 @@ const routes: Routes = [
         path: AppRouteEnum.Developers,
         loadChildren: () => import('@pages/developers')
           .then((m) => m.DevelopersModule)
-      },
-      {
-        path: AppRouteEnum.Auth,
-        loadChildren: () => import('@pages/auth')
-          .then((m) => m.AuthModule)
       }
     ]
   }

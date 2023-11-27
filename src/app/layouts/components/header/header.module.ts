@@ -5,13 +5,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HeaderComponent } from './header.component';
 import { RouterModule } from '@angular/router';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
-import { LocalizeSwitcherComponent } from './components';
+import { LocalizeSwitcherComponent, LoginComponent, ModalComponent, RegistrationComponent } from './components';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    LocalizeSwitcherComponent
+    LocalizeSwitcherComponent,
+    LoginComponent,
+    RegistrationComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,
@@ -19,6 +24,9 @@ import { LocalizeSwitcherComponent } from './components';
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule
   ],
   exports: [
